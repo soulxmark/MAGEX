@@ -1,0 +1,57 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Parallax Effect */
+  .parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+  }
+  
+  h1, h2 {
+    margin-bottom: 20px;
+  }
+  
+  footer {
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+  section {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+    font-size: 18px;
+  }
+  
+  footer .content p {
+    font-size: 14px;
+  }
+  
