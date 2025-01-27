@@ -213,3 +213,93 @@ body {
 .social-media a:hover {
   color: #007bff;
 }
+
+
+/*------------------ About Us Section--------------------- */
+.about-us {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.about-us .container-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* One columns layout */
+  grid-template-rows: 1fr;
+  gap: 150px; /* Space between columns */
+
+}
+
+.about-text {
+  text-align: left;
+}
+
+.about-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #222;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.about-text strong {
+  color: #ffa500;
+}
+
+.about-text .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #ffa500;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: left;
+}
+
+.about-text .btn:hover {
+  background-color: #ff7f00;
+}
+
+.about-image {
+  grid-column: 2/3; /* Places the image in the second column (right side) */
+  height: 100%;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 350px; /* Limit the image size */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design for Grid */
+@media (max-width: 768px) {
+  .about-us .container {
+    grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    gap: 20px;
+  }
+
+  .about-text {
+    text-align: center; /* Center text on small screens */
+  }
+
+  .about-image {
+    text-align: center; /* Center image on small screens */
+    grid-column: 1; /* Ensure image takes full width in single-column layout */
+  }
+
+  .about-image img {
+    max-width: 100%; /* Ensure the image takes full width on small screens */
+  }
+}
