@@ -3,136 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamburger Navigation with Animation</title>
+    <title>Slideshow</title>
     <style>
         * {
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
         }
 
         body {
             font-family: Arial, sans-serif;
-            overflow-x: hidden; /* Prevent horizontal scroll */
-        }
-
-        .navbar {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            z-index: 10;
-        }
-
-        .logo {
-            color: #333;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .hamburger {
-            display: block;
-            font-size: 30px;
-            cursor: pointer;
-            color: #333;
-            transition: transform 0.3s ease;
-        }
-
-        .hamburger.open .bar1 {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-
-        .hamburger.open .bar2 {
-            opacity: 0;
-        }
-
-        .hamburger.open .bar3 {
-            transform: rotate(45deg) translate(-5px, -6px);
-        }
-
-        .hamburger .bar {
-            display: block;
-            width: 35px;
-            height: 5px;
-            margin: 6px 0;
-            background-color: #333;
-            transition: 0.4s;
-        }
-
-        /* Hide the menu by default */
-        .nav-links {
-            position: fixed;
-            top: 0;
-            left: -250px; /* Hidden off-screen */
-            width: 250px;
-            height: 100%;
-            background-color: #333;
-            transition: left 0.3s ease;
-            padding-top: 60px;
-            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
-        }
-
-        .nav-links.active {
-            left: 0; /* Slide in */
-        }
-
-        .nav-links ul {
-            list-style-type: none;
+            margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
 
-        .nav-links li {
-            margin: 15px 0;
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
         }
 
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px;
-            display: block;
-            transition: background-color 0.3s ease;
+        .mySlides {
+            display: none;
         }
 
-        .nav-links a:hover {
-            background-color: #f0a500;
+        img {
+            width: 100%;
+            height: auto;
         }
 
-        /* Media query for small screens */
-        @media screen and (max-width: 768px) {
-            .logo {
-                font-size: 18px;
-            }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 50%;
+            user-select: none;
+        }
+
+        .prev {
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        .next {
+            right: 0;
+            transform: translateY(-50%);
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="navbar">
-            <div class="logo">MySite</div>
-            <div class="hamburger" id="hamburger">
-                <div class="bar bar1"></div>
-                <div class="bar bar2"></div>
-                <div class="bar bar3"></div>
-            </div>
+    <div class="slideshow-container">
+        <!-- Slides -->
+        <div class="mySlides fade">
+            <img src="https://via.placeholder.com/800x400?text=Slide+1" alt="Slide 1">
         </div>
-        <nav class="nav-links" id="navLinks">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div class="mySlides fade">
+            <img src="https://via.placeholder.com/800x400?text=Slide+2" alt="Slide 2">
+        </div>
+        <div class="mySlides fade">
+            <img src="https://via.placeholder.com/800x400?text=Slide+3" alt="Slide 3">
+        </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
     <script>
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
+        let slideIndex = 0;
+        let slides;
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('open');
+        // Wait for the DOM to load before running JS
+        document.addEventListener("DOMContentLoaded", () => {
+            slides = document.getElementsByClassName("mySlides");
+            showSlides(); // Automatically start the slideshow
         });
+
+        // Function to show slides
+        function showSlides() {
+            // Hide all slides
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            // Increment slideIndex, reset if it's out of bounds
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+
+            // Show current slide
+            slides[slideIndex - 1].style.display = "block";
+
+            // Change slide every 3 seconds
+            setTimeout(showSlides, 3000);
+        }
+
+        // Function for manual navigation
+        function plusSlides(n) {
+            slideIndex += n;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            if (slideIndex < 1) { slideIndex = slides.length }
+            showSlides();
+        }
     </script>
 
 </body>

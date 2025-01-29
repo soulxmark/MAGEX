@@ -1,24 +1,42 @@
-// Optional: Smooth scrolling for the page
-document.querySelector('html').style.scrollBehavior = 'smooth';
-// JavaScript to detect when an element is in view
-const fadeElements = document.querySelectorAll('.fade-in');
+  // Wait for the DOM to load before executing
+  document.addEventListener("DOMContentLoaded", function() {
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("mySlides");
 
-function checkInView() {
-  fadeElements.forEach((element) => {
-    const rect = element.getBoundingClientRect();
-    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-      element.classList.add('visible');
+    // Show the current slide
+    function showSlides() {
+        // Hide all slides initially
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        // Move to the next slide
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+
+        // Display the current slide with a fade effect
+        slides[slideIndex - 1].style.display = "block";
+        slides[slideIndex - 1].style.opacity = 0; // Start opacity at 0
+        setTimeout(function() {
+            slides[slideIndex - 1].style.transition = "opacity 1s"; // Fade in effect
+            slides[slideIndex - 1].style.opacity = 1; // Fade to opacity 1
+        }, 10); // Delay to ensure opacity change works
+
+        // Automatically switch slides every 3 seconds
+        setTimeout(showSlides, 3000);
     }
-  });
-}
-const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
-        const body = document.body;
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('open');
-            body.classList.toggle('menu-active');  // Add or remove background dimming
-        })
-window.addEventListener('scroll', checkInView);
-window.addEventListener('load', checkInView); // For when the page loads
+    // Function to navigate between slides manually
+    function plusSlides(n) {
+        slideIndex += n;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        if (slideIndex < 1) { slideIndex = slides.length; }
+        showSlides();
+    }
+
+    // Start the slideshow
+    showSlides();
+
+    // Make sure the navigation buttons call the plusSlides function
+    window.plusSlides = plusSlides;
+});

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Visions & Vignettes</title>
   <link rel="stylesheet" href="./style/main.css">
+  <link rel="icon" type="image/x-icon" href="images/logo.ico">
 </head>
 <body>
   <!-- Navigation -->
@@ -13,11 +14,11 @@
       <a href="#" class="logo">Visions & Vignettes</a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="./pages/about.html">Book</a></li>
-        <li><a href="./pages/services.html">Services</a></li>
-        <li><a href="./pages/items.html">Items</a></li>
-        <li><a href="./pages/items.html">Collection</a></li>
-        <li><a href="./about.html">About Us</a></li>
+        <li><a href=".about.html">Book</a></li>
+        <li><a href=".services.html">Services</a></li>
+        <li><a href=".items.html">Items</a></li>
+        <li><a href=".colletion.html">Collection</a></li>
+        <li><a href=".about.html">About Us</a></li>
       </ul>
     </div>
   </nav>
@@ -32,8 +33,22 @@
         </p>
         <a href="#learn-more" class="btn">Learn More</a>
       </div>
-      <div class="hero-image">
-        <img src="./images/hero.png" alt="Hero Image">
+      <div class="slideshow-container">
+        <!-- Slides -->
+        <div class="mySlides fade">
+            <img src="images/portrait.webp" alt="Slide 1">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/pre-nup.webp" alt="Slide 2">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/wedding.webp" alt="Slide 3">
+        </div>
+            <!-- Navigation Buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    
     </div>
     </div>
   </section>
@@ -49,13 +64,13 @@
           <li><a href="#contact">Contact Us</a></li>
         </ul>
         <div class="social-media">
-          <a href="https://www.facebook.com/profile.php?id=61568568867034" aria-label="Facebook">Facebook</a>
-          <a href="#" aria-label="Twitter">Twitter</a>
-          <a href="https://www.tiktok.com/@augventurer?lang=en" aria-label="Instagram">Tiktok</a>
+            <a href="https://www.facebook.com/profile.php?id=61568568867034" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="Twitter">Twitter</a>
+            <a href="https://www.tiktok.com/@augventurer?lang=en" aria-label="Instagram">Tiktok</a>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-  
+    </footer>
+  <script src="script/script.js"></script>
 </body>
 </html>
