@@ -23,7 +23,7 @@
         }, 10); // Delay to ensure opacity change works
 
         // Automatically switch slides every 3 seconds
-        setTimeout(showSlides, 3000);
+        setTimeout(showSlides, 10000);
     }
 
     // Function to navigate between slides manually
