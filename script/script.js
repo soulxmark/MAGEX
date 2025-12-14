@@ -1,13 +1,25 @@
-  // Wait for the DOM to load before executing
-  document.addEventListener("DOMContentLoaded", function() {
+// Wait for the DOM to load before executing
+document.addEventListener("DOMContentLoaded", function() {
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.getElementById('primary-navigation');
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function() {
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', String(!expanded));
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // Slideshow
     let slideIndex = 0;
     const slides = document.getElementsByClassName("mySlides");
 
-    // Show the current slide
     function showSlides() {
         // Hide all slides initially
         for (let i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
+            slides[i].style.opacity = 0;
         }
 
         // Move to the next slide
@@ -15,18 +27,18 @@
         if (slideIndex > slides.length) { slideIndex = 1; }
 
         // Display the current slide with a fade effect
-        slides[slideIndex - 1].style.display = "block";
-        slides[slideIndex - 1].style.opacity = 0; // Start opacity at 0
-        setTimeout(function() {
-            slides[slideIndex - 1].style.transition = "opacity 1s"; // Fade in effect
-            slides[slideIndex - 1].style.opacity = 1; // Fade to opacity 1
-        }, 10); // Delay to ensure opacity change works
+        if (slides[slideIndex - 1]) {
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(function() {
+                slides[slideIndex - 1].style.transition = "opacity 1s"; // Fade in effect
+                slides[slideIndex - 1].style.opacity = 1; // Fade to opacity 1
+            }, 10);
+        }
 
-        // Automatically switch slides every 3 seconds
+        // Automatically switch slides every 10 seconds
         setTimeout(showSlides, 10000);
     }
 
-    // Function to navigate between slides manually
     function plusSlides(n) {
         slideIndex += n;
         if (slideIndex > slides.length) { slideIndex = 1; }
@@ -37,6 +49,6 @@
     // Start the slideshow
     showSlides();
 
-    // Make sure the navigation buttons call the plusSlides function
+    // Expose plusSlides to global scope for inline onclick handlers
     window.plusSlides = plusSlides;
 });

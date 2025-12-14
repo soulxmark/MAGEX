@@ -1,0 +1,23 @@
+{
+  "name": "magex",
+  "version": "1.0.0",
+  "description": "Static site (Visions & Vignettes) served by a tiny Node static server",
+  "main": "server-express.js",
+  "scripts": {
+    "start": "node server-express.js",
+    "start:static": "node server.js",
+    "dev": "nodemon server-express.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
