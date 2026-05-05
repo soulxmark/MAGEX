@@ -1,78 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visions & Vignettes</title>
-  <link rel="stylesheet" href="./style/main.css">
-  <link rel="icon" type="image/x-icon" href="images/logo.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lens Studio - Photography Portfolio</title>
+    <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <!-- Navigation -->
-  <nav class="navbar" role="navigation" aria-label="Primary Navigation">
-    <div class="container">
-      <a href="./index.html" class="logo">Visions & Vignettes</a>
-      <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">☰</button>
-      <ul id="primary-navigation" class="nav-links">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./book.html">Book</a></li>
-        <li><a href="./services.html">Services</a></li>
-        <li><a href="./items.html">Items</a></li>
-        <li><a href="./colletion.html">Collection</a></li>
-        <li><a href="./about.html">About Us</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero" id="main">
-    <div class="container">
-      <div class="hero-text">
-        <h1 class="hero-title">Visions & Vignettes</h1>
-        <p class="hero-description">
-          Explore endless opportunities and create something extraordinary with us today.
-        </p>
-        <a href="#learn-more" class="btn">Learn More</a>
-      </div>
-      <div class="slideshow-container">
-        <!-- Slides -->
-        <div class="mySlides fade">
-            <img src="images/portrait.webp" alt="Slide 1">
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <img src="./images/logo.png" alt="MAGE ARK Studio Logo">
         </div>
-        <div class="mySlides fade">
-            <img src="images/pre-nup.webp" alt="Slide 2">
-        </div>
-        <div class="mySlides fade">
-            <img src="images/wedding.webp" alt="Slide 3">
-        </div>
-            <!-- Navigation Buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    
-    </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <p>&copy; Visions & Vignettes. All rights reserved.</p>
-        <ul class="footer-links">
-          <li><a href="#privacy">Privacy Policy</a></li>
-          <li><a href="#terms">Terms of Service</a></li>
-          <li><a href="#contact">Contact Us</a></li>
+        <ul>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#rates">Rates</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="social-media">
-          <a href="https://www.facebook.com/profile.php?id=61568568867034" aria-label="Facebook" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a href="#" aria-label="Twitter" target="_blank" rel="noopener noreferrer">Twitter</a>
-          <a href="https://www.tiktok.com/@augventurer?lang=en" aria-label="TikTok" target="_blank" rel="noopener noreferrer">TikTok</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Visual Stories</h1>
+            <p>Capturing Moments, Creating Memories</p>
+            <a href="#portfolio" class="cta-button">View Work</a>
         </div>
+    </section>
+
+
+   <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="section-title">Portfolio</h2>
+        
+        <div class="gallery-grid">
+            <!-- Item 1 -->
+            <div class="gallery-item">
+                <img src="./images/wedding/wed.jpg" alt="Wedding Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Gilver & Donna</h3>
+                    <p>Venue | The Church Of Jesus Christ Of Latter Day Saints
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="gallery-item">
+                <img src="./images/Prenup.jpg" alt="Portrait Series" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Prenup</h3>
+                    <p>Human connection and emotion</p>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="gallery-item">
+                <img src="YOUR_IMAGE_PATH_HERE.jpg" alt="Nature & Wild" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Nature & Wild</h3>
+                    <p>The beauty of landscapes</p>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="gallery-item">
+                <img src="YOUR_IMAGE_PATH_HERE.jpg" alt="Editorial" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Editorial</h3>
+                    <p>Story-driven photography</p>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="gallery-item">
+                <img src="YOUR_IMAGE_PATH_HERE.jpg" alt="Fashion" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Fashion</h3>
+                    <p>Style and elegance</p>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="gallery-item">
+                <img src="YOUR_IMAGE_PATH_HERE.jpg" alt="Commercial" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Commercial</h3>
+                    <p>Brand and product work</p>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <!-- Rates Section -->
+    <section class="rates" id="rates">
+        <h2 class="section-title">Pricing & Packages</h2>
+        
+        <div class="rates-grid">
+            <div class="rate-card">
+                <div class="rate-icon">📸</div>
+                <h3>Portrait Session</h3>
+                <p class="rate-description">Perfect for individual or couple portraits</p>
+                <div class="rate-price">$350</div>
+                <ul class="rate-features">
+                    <li>1 hour photo session</li>
+                    <li>1 location of choice</li>
+                    <li>20 edited high-res images</li>
+                    <li>Online gallery access</li>
+                    <li>Personal usage rights</li>
+                </ul>
+                <a href="#contact" class="rate-button">Book Now</a>
+            </div>
+
+            <div class="rate-card featured-rate">
+                <div class="rate-badge">Popular</div>
+                <div class="rate-icon">🎭</div>
+                <h3>Event Photography</h3>
+                <p class="rate-description">Capture your special occasions</p>
+                <div class="rate-price">$800</div>
+                <ul class="rate-features">
+                    <li>4 hours coverage</li>
+                    <li>Unlimited locations</li>
+                    <li>100+ edited images</li>
+                    <li>Second photographer</li>
+                    <li>Online gallery & USB</li>
+                    <li>Commercial usage rights</li>
+                </ul>
+                <a href="#contact" class="rate-button">Book Now</a>
+            </div>
+
+            <div class="rate-card">
+                <div class="rate-icon">💼</div>
+                <h3>Commercial Shoot</h3>
+                <p class="rate-description">Professional product & brand photography</p>
+                <div class="rate-price">$1,500</div>
+                <ul class="rate-features">
+                    <li>Full day session</li>
+                    <li>Multiple locations</li>
+                    <li>200+ edited images</li>
+                    <li>Studio access included</li>
+                    <li>Full commercial rights</li>
+                    <li>Rush delivery available</li>
+                </ul>
+                <a href="#contact" class="rate-button">Book Now</a>
+            </div>
+        </div>
+
+        <div class="rates-note">
+            <p>All packages include professional editing and color correction. Custom packages available upon request.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-text">
+            <h2>About the Artist</h2>
+            <p>With over 10 years of experience in professional photography, I specialize in capturing authentic moments that tell powerful stories. My work spans portrait, editorial, commercial, and fine art photography.</p>
+            <p>I believe in the power of visual storytelling and the importance of capturing the essence of each subject. Every project is approached with dedication, creativity, and technical excellence.</p>
+            <p>When I'm not behind the camera, you'll find me exploring new locations, studying light, and constantly pushing the boundaries of my craft.</p>
+        </div>
+        <div class="about-image"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p><a href="mailto:hello@lensstudio.com">hello@lensstudio.com</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>Phone</h3>
+                <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>Location</h3>
+                <p>New York, NY</p>
+            </div>
+        </div>
+        <a href="mailto:hello@lensstudio.com" class="cta-button">Start a Project</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 MAGE Ark Studio. All rights reserved. | Photography by Mark Augustine Estimada</p>
     </footer>
-  <script src="script/script.js"></script>
+
+    <script src="./script/script.js"></script>
 </body>
 </html>
