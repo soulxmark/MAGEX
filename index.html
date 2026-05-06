@@ -20,12 +20,42 @@
         </ul>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Slideshow -->
     <section class="hero">
+        <div class="hero-slideshow">
+            <div class="hero-slide active">
+                <img src="./images/wedding/wed.jpg" alt="Wedding Photography">
+            </div>
+            <div class="hero-slide">
+                <img src="./images/wedd.jpg" alt="Portrait Photography">
+            </div>
+            <div class="hero-slide">
+                <img src="./images/Prenup.jpg" alt="Prenup Photography">
+            </div>
+            <div class="hero-slide">
+                <img src="./images/baby/baby.jpg" alt="Baby Photography">
+            </div>
+        </div>
+        
+        <div class="hero-overlay"></div>
+        
         <div class="hero-content">
             <h1>Visual Stories</h1>
             <p>Capturing Moments, Creating Memories</p>
             <a href="#portfolio" class="cta-button">View Work</a>
+        </div>
+        
+        <!-- Slideshow Controls -->
+        <button class="hero-nav prev" aria-label="Previous slide">&#10094;</button>
+        <button class="hero-nav next" aria-label="Next slide">&#10095;</button>
+        
+        <!-- Slide Indicators -->
+        <div class="hero-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+            <span class="indicator" data-slide="3"></span>
+            <span class="indicator" data-slide="4"></span>
         </div>
     </section>
 
@@ -40,35 +70,36 @@
                 <img src="./images/wedding/wed.jpg" alt="Wedding Photography" class="gallery-item-image">
                 <div class="gallery-overlay">
                     <h3>Gilver & Donna</h3>
-                    <p>Venue | The Church Of Jesus Christ Of Latter Day Saints
-                    </p>
+                    <p>Venue | The Church Of Jesus Christ Of Latter Day Saints</p>
                 </div>
             </div>
 
             <div class="gallery-item">
-                <img src="./images/wedd.jpg" alt="Nature & Wild" class="gallery-item-image">
+                <img src="./images/wedd.jpg" alt="Debut Photography" class="gallery-item-image">
                 <div class="gallery-overlay">
-                    <h3>Debu</h3>
-                    <p>The beauty of landscapes</p>
+                    <h3>Debut</h3>
+                    <p>Celebrating milestones</p>
                 </div>
             </div>
             
             <div class="gallery-item">
-                <img src="./images/wddd.jpg" alt="Nature & Wild" class="gallery-item-image">
+                <img src="./images/wddd.jpg" alt="Wedding Ceremony" class="gallery-item-image">
                 <div class="gallery-overlay">
-                    <h3>Debu</h3>
-                    <p>The beauty of landscapes</p>
+                    <h3>Wedding Ceremony</h3>
+                    <p>Sacred moments captured</p>
                 </div>
             </div>
+
             <!-- Prenup -->
             <div class="gallery-item">
-                <img src="./images/Prenup.jpg" alt="Portrait Series" class="gallery-item-image">
+                <img src="./images/Prenup.jpg" alt="Prenup Photography" class="gallery-item-image">
                 <div class="gallery-overlay">
                     <h3>Prenup</h3>
-                    <p>Human connection and emotion</p>
+                    <p>Love stories before the big day</p>
                 </div>
             </div>
-            <!-- Item 3 -->
+
+            <!-- Nature -->
             <div class="gallery-item">
                 <img src="./images/Debu.jpg" alt="Nature & Wild" class="gallery-item-image">
                 <div class="gallery-overlay">
@@ -77,32 +108,167 @@
                 </div>
             </div>
 
-            <!-- Item 4 -->
+            <!-- Baby Photos -->
             <div class="gallery-item">
-                <img src="./images/baby/baby.jpg" alt="Editorial" class="gallery-item-image">
+                <img src="./images/baby/baby.jpg" alt="Baby Photography" class="gallery-item-image">
                 <div class="gallery-overlay">
-                    <h3>Editorial</h3>
-                    <p>Story-driven photography</p>
+                    <h3>Newborn Session</h3>
+                    <p>Precious first moments</p>
                 </div>
             </div>
 
-            <!-- Item 5 -->
             <div class="gallery-item">
-                <img src="YOUR_IMAGE_PATH_HERE.jpg" alt="Fashion" class="gallery-item-image">
+                <img src="./images/baby/baby2.jpg" alt="Baby Portrait" class="gallery-item-image">
                 <div class="gallery-overlay">
-                    <h3>Fashion</h3>
-                    <p>Style and elegance</p>
+                    <h3>Baby Portrait</h3>
+                    <p>Capturing innocence</p>
                 </div>
             </div>
 
-            <!-- Item 6 -->
             <div class="gallery-item">
-                <img src="YOUR_IMAGE_PATH_HERE.jpg" alt="Commercial" class="gallery-item-image">
+                <img src="./images/baby/baby3.jpg" alt="Family Session" class="gallery-item-image">
                 <div class="gallery-overlay">
-                    <h3>Commercial</h3>
-                    <p>Brand and product work</p>
+                    <h3>Family Session</h3>
+                    <p>Bonds that last forever</p>
                 </div>
             </div>
+
+            <div class="gallery-item">
+                <img src="./images/portrait/1.jpg" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./images/portrait/2.jpg" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./images/portrait/3.jpg" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./images/portrait/4.png" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
+            <div class="gallery-item">
+                <img src="./images/portrait/5.jpg" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
+            <div class="gallery-item">
+                <img src="./images/portrait/6.jpg" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
+            <duv class="gallery-item">
+                <img src="./images/portrait/7.jpg" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
+            <div class="gallery-item">
+                <img src="./images/portrait/8.jpg" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
+            <div class="gallery-item">
+                <img src="./images/portrait/9.jpg" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
+            <div class="gallery-item">
+                <img src="./images/portrait/10.jpg" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
+            <div class="gallery-item">
+                <img src="./images/portrait/11.jpg" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
+            <div class="gallery-item">
+                <img src="./images/portrait/12.jpg" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./images/portrait/13.jpg" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
+            <div class="gallery-item">
+                <img src="./images/portrait/14.jpg" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
+            <div class="gallery-item">
+                <img src="./images/portrait/15.jpg" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
+            <div class="gallery-item">
+                <img src="./images/wedding/11.jpg" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
+            <div class="gallery-item">
+                <img src="./images/wedding/22.jpg" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
+            <div class="gallery-item">
+                <img src="./images/wedding/33.jpg" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
+            <div class="gallery-item">
+                <img src="./images/wedding/44.jpg" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
+            <div class="gallery-item">
+                <img src="./images/wedding/55.jpg" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
+            <div class="gallery-item">
+                <img src="./images/wedding/fam/66.jpg" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
+            <div class="gallery-item">
+                <img src="./images/wedding/fam/77.jpg" alt="Milestone Photography" class="gallery-item-image">
+                <div class="gallery-overlay">
+                    <h3>Milestone Photography</h3>
+                    <p>Growing up beautifully</p>
+                </div>
         </div>
     </section>
 
@@ -125,7 +291,7 @@
                 </ul>
                 <a href="#contact" class="rate-button">Book Now</a>
             </div>
-
+        
             <div class="rate-card featured-rate">
                 <div class="rate-badge">Popular</div>
                 <div class="rate-icon">🎭</div>
@@ -158,6 +324,36 @@
                 </ul>
                 <a href="#contact" class="rate-button">Book Now</a>
             </div>
+             <div class="rate-card">
+                <div class="rate-icon">💼</div>
+                <h3>Commercial Shoot</h3>
+                <p class="rate-description">Professional product & brand photography</p>
+                <div class="rate-price">$1,500</div>
+                <ul class="rate-features">
+                    <li>Full day session</li>
+                    <li>Multiple locations</li>
+                    <li>200+ edited images</li>
+                    <li>Studio access included</li>
+                    <li>Full commercial rights</li>
+                    <li>Rush delivery available</li>
+                </ul>
+                <a href="#contact" class="rate-button">Book Now</a>
+            </div>
+             <div class="rate-card">
+                <div class="rate-icon">💼</div>
+                <h3>Commercial Shoot</h3>
+                <p class="rate-description">Professional product & brand photography</p>
+                <div class="rate-price">$1,500</div>
+                <ul class="rate-features">
+                    <li>Full day session</li>
+                    <li>Multiple locations</li>
+                    <li>200+ edited images</li>
+                    <li>Studio access included</li>
+                    <li>Full commercial rights</li>
+                    <li>Rush delivery available</li>
+                </ul>
+                <a href="#contact" class="rate-button">Book Now</a>
+            </div>
         </div>
 
         <div class="rates-note">
@@ -166,16 +362,25 @@
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
-        <div class="about-text">
-            <h2>About the Artist</h2>
-            <p>With over 10 years of experience in professional photography, I specialize in capturing authentic moments that tell powerful stories. My work spans portrait, editorial, commercial, and fine art photography.</p>
-            <p>I believe in the power of visual storytelling and the importance of capturing the essence of each subject. Every project is approached with dedication, creativity, and technical excellence.</p>
-            <p>When I'm not behind the camera, you'll find me exploring new locations, studying light, and constantly pushing the boundaries of my craft.</p>
-        </div>
-        <div class="about-image"></div>
-    </section>
-
+   <section class="about" id="about">
+    <div class="about-text">
+        <h2>Behind the Lens</h2>
+        <p>
+            I am a visual storyteller and cinematographer specializing in capturing the raw energy of events through professional photography and high-end videography. From cinematic portraits to fast-paced <strong>Same Day Edit (SDE)</strong> productions, my goal is to turn fleeting moments into lasting legacies.
+        </p>
+        <p>
+            My approach blends technical precision with creative intuition. By utilizing industry-standard tools like the Sony Alpha series and DJI stabilization systems, I ensure every frame is polished, stabilized, and color-graded to a professional standard.
+        </p>
+        <p>
+            When I'm not on a shoot or in the editing suite refining node trees in DaVinci Resolve, I’m likely exploring new perspectives or integrating my background in Information Systems to streamline creative workflows.
+        </p>
+    </div>
+    
+    <div class="about-image">
+        <!-- Replace 'your-photo.jpg' with your actual image file name -->
+        <img src="./images/Me/aa.jpg" alt="MAGE Ark Studio Lead Photographer">
+    </div>
+</section>
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <h2>Get In Touch</h2>
@@ -190,7 +395,7 @@
             </div>
             <div class="contact-item">
                 <h3>Location</h3>
-                <p>Quezon City,Philippines</p>
+                <p>Quezon City, Philippines</p>
             </div>
         </div>
         <a href="mailto:hello@lensstudio.com" class="cta-button">Start a Project</a>
